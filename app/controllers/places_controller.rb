@@ -5,6 +5,10 @@ class PlacesController < ApplicationController
     # handle business logic
     end
 
+    def show
+    @place = Place.find_by({ "id" => params["id"] })
+    end
+
     def new
     @place = Place.new
     end
